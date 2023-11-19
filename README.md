@@ -106,4 +106,6 @@ Once everything is built, go back to the home directory and insert the following
 export ROS_DOMAIN_ID=30
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
+With this, setting up the RPi4 and the remote computer is completed!!!
 
+---
