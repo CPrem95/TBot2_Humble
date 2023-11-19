@@ -78,6 +78,12 @@ sudo apt install ros-humble-xacro
 sudo apt install ros-humble-joint-state-publisher
 sudo apt install ros-humble-rmw-cyclonedds-cpp
 ```
+The sophus needs some changes to avoid several warnings. Use following commands to apply them.
+```
+git clone https://github.com/CPrem95/sophusCorrection.git
+sudo rm -r /opt/ros/humble/include/sophus
+sudo cp -r ~/sophusCorrection/sophus /opt/ros/humble/include
+```
 
 Now, create a new workspace to work with the TBot2.
 ```
@@ -85,5 +91,16 @@ mkdir -p ~/tbot2_ws/src && cd ~tbot2_ws/src
 ```
 Get all the necessary files from github.
 ```
-git clone 
+git clone https://github.com/CPrem95/TBot2_Humble.git
+```
+Go back to the root of the workspace and build the package.
+```
+cd ..
+colcon build --symlink-install --cmake-args -DCMAKE_CXX_FLAGS="-w"
+```
+Once everything is built, go back to the home directory and insert the following lines to the end of .bashrc file.
+
+```
+export ROS_DOMAIN_ID=30
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
