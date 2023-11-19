@@ -2,7 +2,7 @@
 
 Connect your RPi4 SBC to a suitable power supply and a monitor.
 
-After booting, Change the **WiFi credentials** as guided in the lab sheet.
+After booting, Change the **WiFi credentials** as guided in the lab sheet [provided PDF].
 
 Open the **.bashrc** file:
 ```
