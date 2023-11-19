@@ -32,7 +32,7 @@ Insert the following line to use the Cyclone DDS:
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
 
-
+<br>
 **TIPS:**
 
 You can use SSH from your remote computer to connect to the RPi4 after setting up the LAN. 
