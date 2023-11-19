@@ -64,5 +64,26 @@ You have to enter the password of the RPi4: SUTD1234
 Now, you can remotely interact with the RPi4 using the remote computer.
 
 DO NOT CLOSE this terminal. This is where you remotely interact with the RPi4.
+
 ---
 
+Now, use the following commands in the SSH terminal (from remote PC to the RPi4) to setup the TurtleBot2. Notice that, here, you are basically making changes to the RPi4, not to the remote PC.
+```
+sudo apt install ros-humble-ecl-build
+sudo apt install ros-humble-ecl-tools
+sudo apt install ros-humble-kobuki-ros-interface
+sudo apt install ros-humble-sophus
+sudo apt install ros-humble-diagnostic-updater
+sudo apt install ros-humble-xacro
+sudo apt install ros-humble-joint-state-publisher
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+```
+
+Now, create a new workspace to work with the TBot2.
+```
+mkdir -p ~/tbot2_ws/src && cd ~tbot2_ws/src
+```
+Get all the necessary files from github.
+```
+git clone 
+```
