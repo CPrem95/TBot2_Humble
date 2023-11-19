@@ -55,11 +55,14 @@ sudo apt install net-tools
 ifconfig
 ```
 
-Now, use the IP address of the RPi4 to connect using the remote computer. In the remote computer:
+Open a new terminal and use the IP address of the RPi4 to connect using the remote computer. In the remote computer:
 ```
 ssh ubuntu@<IP_ADDRESS_RPI4>
 ```
 You have to enter the password of the RPi4: SUTD1234
 
 Now, you can remotely interact with the RPi4 using the remote computer.
+
+DO NOT CLOSE this terminal. This is where you remotely interact with the RPi4.
+---
 
