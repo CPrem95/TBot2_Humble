@@ -31,6 +31,7 @@ Insert the following line to use the Cyclone DDS:
 ```
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
+Finally, save the .bashrc file and exit.
 
 ---
 **TIPS:**
@@ -44,3 +45,21 @@ sudo apt install openssh-client
 ```
 sudo apt install openssh-server
 ```
+In the RPi4:
+
+Find the IP address:
+```
+sudo apt install net-tools
+```
+```
+ifconfig
+```
+
+Now, use the IP address of the RPi4 to connect using the remote computer. In the remote computer:
+```
+ssh ubuntu@<IP_ADDRESS_RPI4>
+```
+You have to enter the password of the RPi4: SUTD1234
+
+Now, you can remotely interact with the RPi4 using the remote computer.
+
