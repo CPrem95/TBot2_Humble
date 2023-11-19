@@ -1,5 +1,5 @@
 # Instructions
-### Raspberry Pi 4 (SBC) @TBot2
+## Raspberry Pi 4 (SBC) @TBot2
 
 Connect your RPi4 SBC to a suitable power supply and a monitor.
 
@@ -68,7 +68,7 @@ DO NOT CLOSE this terminal. This is where you remotely interact with the RPi4.
 
 ---
 
-### Remote computer
+## Remote computer
 Now, use the following commands in the SSH terminal (from remote PC to the RPi4) to setup the TurtleBot2. Notice that, here, you are basically making changes to the RPi4, not to the remote PC.
 ```
 sudo apt install ros-humble-ecl-build
@@ -106,3 +106,4 @@ Once everything is built, go back to the home directory and insert the following
 export ROS_DOMAIN_ID=30
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ```
+
