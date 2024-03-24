@@ -71,7 +71,6 @@ DO NOT CLOSE this terminal. This is where you remotely interact with the RPi4.
 ## Remote computer
 Now, use the following commands in the SSH terminal (from remote PC to the RPi4) to setup the TurtleBot2. Notice that, here, you are basically making changes to the RPi4, not to the remote PC.
 ```
-sudo apt install ros-humble-ecl-build
 sudo apt install ros-humble-ecl-tools
 sudo apt install ros-humble-kobuki-ros-interface
 sudo apt install ros-humble-sophus
@@ -87,7 +86,8 @@ sudo rm -r /opt/ros/humble/include/sophus
 sudo cp -r ~/sophusCorrection/sophus /opt/ros/humble/include
 ```
 
-Now, create a new workspace to work with the TBot2.
+Now, create a new workspace to work with the TBot2. Not necessary.
+You may clone the git repo directly to the /home.
 ```
 mkdir -p ~/tbot2_ws/src && cd ~tbot2_ws/src
 ```
@@ -95,7 +95,12 @@ Get all the necessary files from github.
 ```
 git clone https://github.com/CPrem95/TBot2_Humble.git
 ```
+Downgrade the setuptools:
+```
+pip install setuptools==58.2.0
+```
 Go back to the root of the workspace and build the package.
+The "-w" FLAG suppresses warning be considered as errors.
 ```
 cd ..
 colcon build --symlink-install --cmake-args -DCMAKE_CXX_FLAGS="-w"
